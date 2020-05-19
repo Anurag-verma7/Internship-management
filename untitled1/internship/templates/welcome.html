@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        #c{
+        position : absolute;
+        right : 10px;
+
+        }
+    </style>
+</head>
+<body>
+<h1 class="bg-dark text-white"  style="text-align:center"  >Welcome To Internellege</h1>
+<img src="{%static 'im4.jpg'%}"width="100%" height="300" ><br>
+<h2 class="bg-warning text-white" style="text-align:center">
+Welcome  {{n}}
+</h2>
+<br>
+
+<div class="container p-3 my-3 bg-dark text-white" style="text-align:center">
+<h3  style="text-align:center">College Name: Dayananda Sagar College Of Engieering</h3><br>
+
+<input type="button" value="Get internship" class="btn btn-primary" class="btn btn-primary btn-lg" onclick="location.href='{%url 'intern'%}'">
+<input type="button" class="btn btn-success" value="Logout" id="c" onclick="location.href='{%url 'log'%}'"><br>
+
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

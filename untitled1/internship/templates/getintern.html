@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>internships</title>
+    
+</head>
+<body>
+<h1 class="bg-dark text-white"  style="text-align:center"  >Welcome To Internellege</h1>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'im1.jpg'%}"width="100%" height="300" >
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'im2.jpg'%}" width="100%" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'im3.jpg'%}"width="100%" height="300" >
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+  </div>
+  <h2 class="bg-warning text-white" style="text-align:center">
+Welcome {{n}}
+</h2>
+<p class="display-4"  style="text-align:center">Internships for you</p>
+{% for name,desc,link in combine %}
+<div class="container p-3 my-3 bg-dark text-white" style="text-align:center"  style="text-align:center">
+  <div ><h1 class="bg-primary text-white"  style="text-align:center">Company Name:{{name}}</h1> &nbsp;</div>
+  <div ><h2 style="text-align:center" class="bg-secondary text-white">Decription:{{desc}}</h2> &nbsp;</div>
+  <div><p3 class="bg-danger text-white" style="text-align:center">Link:<a>{{link}}</a></p3></div>
+</div>
+<br><br><br><br><br><br>
+<!--<h1 class="bg-primary text-white"  style="text-align:center">Company name:{{name}}</h1> &nbsp;<br><h2 style="text-align:center" class="bg-secondary text-white">Decription:{{desc}}</h2> &nbsp;<br><p3 class="bg-info text-white" style="text-align:center">Link:{{link}}</p3><br><br>-->
+
+{% endfor %}
+
+<input type="button" class="btn btn-success" value="Logout" id="c" onclick="location.href='{%url 'log'%}'"><br>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
